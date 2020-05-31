@@ -8,10 +8,8 @@ var two = JSON.parse(localStorage.getItem('two')) || [];
 var three = JSON.parse(localStorage.getItem('three')) || [];
 var four = JSON.parse(localStorage.getItem('four')) || [];
 var five = JSON.parse(localStorage.getItem('five')) || [];
-
 // display current date in header by appending 'p' element
 $("#currentDay").prepend(moment().format("dddd MMMM, Do"));
-
 // load time slot items from localStorage
 $("#item-nine").append(nine);
 $("#item-ten").append(ten);
@@ -22,7 +20,6 @@ $("#item-two").append(two);
 $("#item-three").append(three);
 $("#item-four").append(four);
 $("#item-five").append(five);
-
 // save time slot items to localStorage, replacing existing values
 $("#save-nine").on("click", function() {
     var item = $("#item-nine").val().trim();
@@ -250,13 +247,14 @@ function fiveStyling() {
     }
 };
 fiveStyling();
-
 // refresh page at the top of every hour
 var current = new Date();
 var future = new Date();
-future.setTime(future.getTime() + 3600000); //3600000 = 1 hour
+// add one hour
+future.setTime(future.getTime() + 3600000);
+// set to to top of next hour
 future.setMinutes(0);
 future.setSeconds(0);
-
+// find time remaining to top of next hour
 var timeout = (future.getTime() - current.getTime());
 setTimeout(function() { window.location.reload(true); }, timeout);
