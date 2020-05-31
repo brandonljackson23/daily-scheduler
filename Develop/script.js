@@ -80,13 +80,18 @@ $("#save-five").on("click", function() {
 });
 // add styling to time slot based on current time
 function nineStyling() {
-    var timeSlot = moment({hour:9});
-    var currentTime = moment().hour();
-    console.log("currentTime " + currentTime);
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(9);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-nine").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-nine").addClass("future");
     } else {
         $("#time-nine").addClass("present");
@@ -94,12 +99,18 @@ function nineStyling() {
 };
 nineStyling();
 function tenStyling() {
-    var timeSlot = moment({hour:10});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(10);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-ten").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-ten").addClass("future");
     } else {
         $("#time-ten").addClass("present");
@@ -107,12 +118,18 @@ function tenStyling() {
 };
 tenStyling();
 function elevenStyling() {
-    var timeSlot = moment({hour:11});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(11);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-eleven").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-eleven").addClass("future");
     } else {
         $("#time-eleven").addClass("present");
@@ -120,12 +137,18 @@ function elevenStyling() {
 };
 elevenStyling();
 function twelveStyling() {
-    var timeSlot = moment({hour:12});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(12);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-twelve").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-twelve").addClass("future");
     } else {
         $("#time-twelve").addClass("present");
@@ -133,12 +156,18 @@ function twelveStyling() {
 };
 twelveStyling();
 function oneStyling() {
-    var timeSlot = moment({hour:13});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(13);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-one").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-one").addClass("future");
     } else {
         $("#time-one").addClass("present");
@@ -146,12 +175,18 @@ function oneStyling() {
 };
 oneStyling();
 function twoStyling() {
-    var timeSlot = moment({hour:14});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(14);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-two").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-two").addClass("future");
     } else {
         $("#time-two").addClass("present");
@@ -159,12 +194,18 @@ function twoStyling() {
 };
 twoStyling();
 function threeStyling() {
-    var timeSlot = moment({hour:15});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(15);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-three").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-three").addClass("future");
     } else {
         $("#time-three").addClass("present");
@@ -172,12 +213,18 @@ function threeStyling() {
 };
 threeStyling();
 function fourStyling() {
-    var timeSlot = moment({hour:16});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(16);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-four").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-four").addClass("future");
     } else {
         $("#time-four").addClass("present");
@@ -185,15 +232,31 @@ function fourStyling() {
 };
 fourStyling();
 function fiveStyling() {
-    var timeSlot = moment({hour:17});
-    var currentTime = moment().hour();
-    console.log("timeslot " + timeSlot);
-    if (moment(currentTime).isAfter(timeSlot)) {
+    var timeSlot = new Date();
+    timeSlot.setHours(17);
+    var currentTime = moment()
+    var diffTime = moment(timeSlot).diff(currentTime);
+    var duration = moment.duration(diffTime);
+    var hours = duration.hours();
+    console.log("currentTime " + moment(currentTime).format("ddd MMM D HH:mm:ss"));
+    console.log("timeslot " + moment(timeSlot).format("ddd MMM D HH:mm:ss"));
+    console.log("hours difference " + hours);
+    if (hours < 0) {
         $("#time-five").addClass("past");
-    } else if (moment(currentTime).isBefore(timeSlot)) {
+    } else if (hours > 0) {
         $("#time-five").addClass("future");
     } else {
         $("#time-five").addClass("present");
     }
 };
 fiveStyling();
+
+// refresh page at the top of every hour
+var current = new Date();
+var future = new Date();
+future.setTime(future.getTime() + 3600000); //3600000 = 1 hour
+future.setMinutes(0);
+future.setSeconds(0);
+
+var timeout = (future.getTime() - current.getTime());
+setTimeout(function() { window.location.reload(true); }, timeout);
